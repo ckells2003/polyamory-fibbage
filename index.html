@@ -43,16 +43,42 @@
 const firebaseConfig = { apiKey:"AIzaSyAzJjmZnYVEkjbEb06_-slfw5IXfBLjrrM", authDomain:"polyamory-fibbage.firebaseapp.com", databaseURL:"https://polyamory-fibbage-default-rtdb.firebaseio.com/", projectId:"polyamory-fibbage", appId:"1:70502343574:web:0666413b22d10950b8b3b7" };
 const MAX_PLAYERS=14, AVATARS=['🦊','🐸','🐙','🦄','🐝','🐼','🦋','🐢','🦩','🐈','🦖','🦝','🐬','🦉','🍄','🌈','🦆','🐰'];
 const QUESTION_BANK=[
- {q:'After her partner shares how excited they are about a new relationship, Sam notices she feels happy for them and jealous at the same time. The research term for experiencing more than one feeling at once is ______.',a:'Mixed emotions',note:'Research on jealousy and metamours recognizes that feelings can be layered; happiness and jealousy do not have to cancel each other out.'},
- {q:'During a session, a client says, “I know I agreed to this, but when plans change without warning, I start wondering if I still matter.” An attachment-informed therapist might explore the need for reassurance and emotional ______.',a:'Security',note:'Jealousy can be explored as information about perceived threats, attachment needs, and a desire for reassurance rather than as proof that a relationship structure is failing.'},
- {q:'Taylor and Morgan say they do not need exclusivity to feel secure. What they do need is trust, respect, and confidence that their shared agreements will be ______.',a:'Honored',note:'Emotional security in consensual nonmonogamy can be supported through trust, respect, communication, and keeping mutually negotiated agreements.'},
- {q:'A couple comes to therapy because one partner wants frequent group dinners with metamours, while the other prefers to keep relationships separate. The therapist should first explore their different preferences for autonomy and ______.',a:'Connection',note:'Polyamorous relationships can involve different needs for independence, shared time, and connection; neither preference is automatically healthier.'},
- {q:'A hinge partner is trying to coordinate two date nights, a shared holiday, childcare, and time to rest. The challenge in this story is the often-underestimated ______ of managing multiple relationships.',a:'Logistics',note:'Scheduling, time, holidays, communication, and other practical arrangements can be significant parts of polyamorous relationship work.'},
- {q:'During a difficult conversation, a partner says, “I am not asking you to end that relationship. I am asking us to make an agreement about how we communicate when plans change.” This is an example of seeking a mutually negotiated ______ rather than using control.',a:'Agreement',note:'Collaborative agreements differ from unilateral demands; they should be negotiated with attention to autonomy and the people affected.'},
- {q:'In an attachment-focused therapy session, the clinician explores the couple’s cycle of protest, withdrawal, and unmet needs without treating having multiple partners as the problem. The therapy model being adapted is ______.',a:'Emotionally Focused Therapy (EFT)',note:'Edwards and colleagues (2023) discuss adapting EFT ideas for work with consensually non-monogamous relationships.'},
- {q:'A relationship agreement gives one partner the power to require their partner to end another relationship. This arrangement is commonly called a ______.',a:'Veto',note:'Veto power can create questions about autonomy, hierarchy, and whose needs have decision-making authority.'},
- {q:'Riley and Casey are both dating Jordan, but Riley and Casey are not dating each other. What are Riley and Casey to one another?',a:'Metamours',note:'Metamours share a partner but are not necessarily romantically or sexually involved with each other.'},
- {q:'A person feels jealousy when their partner gets close to someone new. Instead of treating the feeling as a command to control the partner, they get curious about what the feeling may be communicating: a perceived ______.',a:'Threat',note:'Jealousy can be approached as a feeling that signals a perceived threat or unmet attachment need, creating an opening for curiosity and communication.'}
+ const QUESTION_BANK=[
+ {
+  q:'In two U.S. studies of single adults, approximately what percentage reported having engaged in consensual non-monogamy at some point in their lives?',
+  a:'21 percent',
+  note:'Haupert et al. (2017) found rates of 21.9% and 21.2% across two samples. This included different forms of consensual non-monogamy, not exclusively polyamory.'
+ },
+ {
+  q:'What is the term for feeling happiness when your partner experiences happiness or connection with another partner?',
+  a:'Compersion',
+  note:'Compersion is often described as feeling joy or happiness about a partner’s positive experiences with another partner. People can experience compersion and jealousy at the same time.'
+ },
+ {
+  q:'What is the term for someone who dates two people who are not dating each other?',
+  a:'Hinge',
+  note:'The hinge connects two separate relationships within a polyamorous network.'
+ },
+ {
+  q:'What term describes reaching the point when someone feels they do not have the time or emotional energy for another relationship?',
+  a:'Polysaturation',
+  note:'It describes an individual’s capacity for relationships, which can vary over time.'
+ },
+ {
+  q:'What do you call two people who share a partner but are not romantically involved with each other?',
+  a:'Metamours',
+  note:'Metamours can have close, friendly, distant, or no direct relationships with one another.'
+ },
+ {
+  q:'What term describes the emotional bonds that can develop between people in a polyamorous network who are not necessarily romantically involved?',
+  a:'Polyaffectivity',
+  note:'These bonds can include friendships or meaningful family-like connections between metamours.'
+ },
+ {
+  q:'What is the term for a relationship agreement that gives one partner the power to require another partner to end a relationship?',
+  a:'Veto power',
+  note:'Veto power can raise questions about autonomy, hierarchy, and decision-making.'
+ }
 ];
 let db=null,room=null,roomRef=null,isHost=false,myId=null,myName='',myAvatar='',localTimer=null,selectedVote=null,selectedAvatar=AVATARS[0],selectedBank=QUESTION_BANK.map((_,i)=>i),lastVoteRound=null;
 const $=id=>document.getElementById(id);const show=id=>$(id).classList.remove('hidden');const hide=id=>$(id).classList.add('hidden');
