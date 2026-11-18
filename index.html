@@ -17,10 +17,10 @@
 <body><div class="wrap">
 <header class="top"><div><div class="brand">FIBBAGE <span>· POLYAMORY EDITION</span></div></div><div class="pill connection" id="connection">Connecting to game server…</div></header>
 <section id="setup" class="panel center">
- <div class="eyebrow">A little knowledge. A little misdirection.</div><div class="ornament">✦ ✧ ✦</div>
- <h1>Can you tell fact<br>from fiction?</h1><p class="lead">Create a room, invite your cohort, and see who can write the most convincing bluff. The truth is sometimes stranger than the lie.</p>
+ <div class="eyebrow">Can tell fact from fiction?</div><div class="ornament">✦ ✧ ✦</div>
+ <h1>Can you tell fact<br>from fiction?</h1><p class="lead">Create a room, invite players, and see who can write the most convincing bluff. The truth is sometimes stranger than the lie.</p>
  <div class="grid" style="max-width:760px;margin:auto;text-align:left"><div class="choice-card"><h3>Host a game</h3><p>Start a room on the presentation computer and choose the questions for your group.</p><button id="createRoom" class="pink">Create game room</button></div><div class="choice-card"><h3>Join a game</h3><p>Enter the room code from the host screen. You can play from your phone.</p><input id="joinCode" placeholder="Enter room code" maxlength="6" aria-label="Room code"><button id="goJoin">Join room</button></div></div>
- <p class="muted small" style="margin-top:22px">Designed for conversation, curiosity, and a little friendly competition.</p><div class="toast" id="setupMsg"></div>
+ <p class="muted small" style="margin-top:22px"></p><div class="toast" id="setupMsg"></div>
 </section>
 <section id="hostLobby" class="panel hidden">
  <div class="grid"><div class="center"><div class="subhead">Scan to join</div><div class="bigcode" id="roomCode">------</div><div id="qrcode" aria-label="QR code for joining the game"></div><p class="muted small" id="joinUrl"></p><div class="status-line" id="qrStatus"></div></div><div><div class="subhead">The gathering place</div><h2><span id="playerCount">0</span> / 14 players</h2><p class="muted small">Players will appear here as soon as they join.</p><div id="lobbyPlayers" class="grid"></div><div class="host-controls"><button id="startGame" class="pink" disabled>Start game</button><button class="secondary" id="closeRoom">Close room</button></div><div class="toast" id="lobbyMsg"></div></div></div>
