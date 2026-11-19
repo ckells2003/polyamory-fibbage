@@ -54,9 +54,9 @@ const QUESTION_BANK=[
   note:'Compersion is often described as feeling joy or happiness about a partner’s positive experiences with another partner. People can experience compersion and jealousy at the same time.'
  },
  {
-  q:'What is the term for someone who dates two people who are not dating each other?',
-  a:'Hinge',
-  note:'The hinge connects two separate relationships within a polyamorous network.'
+  q:'In 2020, the city of Somerville, Massachusetts became the first U.S. municipality to officially recognize polyamorous domestic partnerships because of a crisis involving ______',
+  a:'Health insurance',
+  note:'During the COVID-19 pandemic, the city council passed the ordinance so that partners in relationships with more than two adults could share employer-sponsored health insurance coverage and hospital visitation rights.'
  },
  {
   q:'What term describes reaching the point when someone feels they do not have the time or emotional energy for another relationship?',
@@ -77,7 +77,11 @@ const QUESTION_BANK=[
   q:'What is the term for a relationship agreement that gives one partner the power to require another partner to end a relationship?',
   a:'Veto power',
   note:'Veto power can raise questions about autonomy, hierarchy, and decision-making.'
- }
+ },
+ {
+  q:'The word "polyamory" was popularized in 1990 by Morning Glory Zell-Ravenheart, who originally invented the term to describe relationships about _______',
+  a:'Neo-paganism',
+  note:'Veto power can raise questions about autonomy, hierarchy, and decision-making.'
 ];
 let db=null,room=null,roomRef=null,isHost=false,myId=null,myName='',myAvatar='',localTimer=null,selectedVote=null,selectedAvatar=AVATARS[0],selectedBank=QUESTION_BANK.map((_,i)=>i),lastVoteRound=null;
 const $=id=>document.getElementById(id);const show=id=>$(id).classList.remove('hidden');const hide=id=>$(id).classList.add('hidden');
