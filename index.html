@@ -82,7 +82,7 @@ const QUESTION_BANK=[
   q:'The word "polyamory" was popularized in 1990 by Morning Glory Zell-Ravenheart, who originally invented the term to describe relationships about _______',
   a:'Neo-paganism',
   note:'Although terms such as polygamy, polygyny, and consensual adultery were in use, polyamory was created as a way to differentiate from relationship dynamics with power imbalances or hierarchies.'
- }
+}
 ];
 let db=null,room=null,roomRef=null,isHost=false,myId=null,myName='',myAvatar='',localTimer=null,selectedVote=null,selectedAvatar=AVATARS[0],selectedBank=QUESTION_BANK.map((_,i)=>i),lastVoteRound=null;
 const $=id=>document.getElementById(id);const show=id=>$(id).classList.remove('hidden');const hide=id=>$(id).classList.add('hidden');
